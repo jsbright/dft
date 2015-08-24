@@ -1,0 +1,291 @@
+Last login: Mon Aug 24 01:52:09 on ttys000
+Joes-MacBook-Pro:~ joe$ cd Desktop/DFT/
+Joes-MacBook-Pro:DFT joe$ ls
+dft.py
+Joes-MacBook-Pro:DFT joe$ rm -rf .git
+Joes-MacBook-Pro:DFT joe$ rm -rf .git*
+Joes-MacBook-Pro:DFT joe$ ls -lah
+total 24
+drwxr-xr-x   4 joe  staff   136B 24 Aug 02:03 .
+drwx------+ 30 joe  staff   1.0K 22 Aug 12:30 ..
+-rw-r--r--@  1 joe  staff   6.0K 24 Aug 02:00 .DS_Store
+-rw-r--r--@  1 joe  staff   1.1K 23 Aug 06:30 dft.py
+Joes-MacBook-Pro:DFT joe$ ls
+dft.py
+Joes-MacBook-Pro:DFT joe$ clear
+
+
+
+
+
+
+
+
+
+Joes-MacBook-Pro:DFT joe$ ls
+dft.py
+Joes-MacBook-Pro:DFT joe$ git branch dft
+fatal: Not a git repository (or any of the parent directories): .git
+Joes-MacBook-Pro:DFT joe$ clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Joes-MacBook-Pro:DFT joe$ ls
+dft.py
+Joes-MacBook-Pro:DFT joe$ clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Joes-MacBook-Pro:DFT joe$ git init
+Initialized empty Git repository in /Users/joe/Desktop/DFT/.git/
+Joes-MacBook-Pro:DFT joe$ git status
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	dft.py
+
+nothing added to commit but untracked files present (use "git add" to track)
+Joes-MacBook-Pro:DFT joe$ git add 
+.DS_Store  .git/      dft.py     
+Joes-MacBook-Pro:DFT joe$ git add 
+.DS_Store  .git/      dft.py     
+Joes-MacBook-Pro:DFT joe$ git add dft.py 
+Joes-MacBook-Pro:DFT joe$ clear
+
+
+
+
+
+Joes-MacBook-Pro:DFT joe$ git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   dft.py
+
+Joes-MacBook-Pro:DFT joe$ git commit -m "uploading code"
+[master (root-commit) 7b1ca36] uploading code
+ Committer: jsbright <joe@lpawifiext-dhcp97-73.ll.iac.es>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 63 insertions(+)
+ create mode 100644 dft.py
+Joes-MacBook-Pro:DFT joe$ git status
+On branch master
+nothing to commit, working directory clean
+Joes-MacBook-Pro:DFT joe$ ls
+dft.py
+Joes-MacBook-Pro:DFT joe$ git remote add dft https://github.com/jsbright/dft.git
+Joes-MacBook-Pro:DFT joe$ git push -u dft master
+Username for 'https://github.com': jsbright
+Password for 'https://jsbright@github.com': 
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 645 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/jsbright/dft.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from dft.
+Joes-MacBook-Pro:DFT joe$ clear
+
+Joes-MacBook-Pro:DFT joe$ ls
+dft.py
+Joes-MacBook-Pro:DFT joe$ git status
+On branch master
+Your branch is up-to-date with 'dft/master'.
+nothing to commit, working directory clean
+Joes-MacBook-Pro:DFT joe$ git checkout -b add_random
+Switched to a new branch 'add_random'
+Joes-MacBook-Pro:DFT joe$ git push
+fatal: No configured push destination.
+Either specify the URL from the command-line or configure a remote repository using
+
+    git remote add <name> <url>
+
+and then push using the remote name
+
+    git push <name>
+
+Joes-MacBook-Pro:DFT joe$ git push dft
+warning: push.default is unset; its implicit value has changed in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the traditional behavior, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+When push.default is set to 'matching', git will push local branches
+to the remote branches that already exist with the same name.
+
+Since Git 2.0, Git defaults to the more conservative 'simple'
+behavior, which only pushes the current branch to the corresponding
+remote branch that 'git pull' uses to update the current branch.
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+fatal: The current branch add_random has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream dft add_random
+
+Joes-MacBook-Pro:DFT joe$ clear
+
+Joes-MacBook-Pro:DFT joe$ git push dft add_random
+Username for 'https://github.com': jsbright
+Password for 'https://jsbright@github.com': 
+Total 0 (delta 0), reused 0 (delta 0)
+To https://github.com/jsbright/dft.git
+ * [new branch]      add_random -> add_random
+Joes-MacBook-Pro:DFT joe$ git branch
+* add_random
+  master
+Joes-MacBook-Pro:DFT joe$ git branch
+* add_random
+  master
+Joes-MacBook-Pro:DFT joe$ ls
+dft.py
+Joes-MacBook-Pro:DFT joe$ dft.py
+-bash: dft.py: command not found
+Joes-MacBook-Pro:DFT joe$ nano dft.py
+Joes-MacBook-Pro:DFT joe$ git push dft add_random
+Username for 'https://github.com': jsbright
+Password for 'https://jsbright@github.com': 
+Everything up-to-date
+Joes-MacBook-Pro:DFT joe$ ls
+dft.py
+Joes-MacBook-Pro:DFT joe$ git status
+On branch add_random
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   dft.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Joes-MacBook-Pro:DFT joe$ git commit -a dft.py 
+fatal: Paths with -a does not make sense.
+Joes-MacBook-Pro:DFT joe$ git add  dft.py 
+Joes-MacBook-Pro:DFT joe$ ls
+dft.py
+Joes-MacBook-Pro:DFT joe$ git status
+On branch add_random
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	modified:   dft.py
+
+Joes-MacBook-Pro:DFT joe$ git push dft add_random
+Username for 'https://github.com': phumbj	
+Password for 'https://phumbj@github.com': 
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/jsbright/dft.git/'
+Joes-MacBook-Pro:DFT joe$ git push dft add_random
+Username for 'https://github.com': jsbright
+Password for 'https://jsbright@github.com': 
+Everything up-to-date
+Joes-MacBook-Pro:DFT joe$ clear
+
+Joes-MacBook-Pro:DFT joe$ git commit
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+test commit
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# Committer: jsbright <joe@lpawifiext-dhcp97-73.ll.iac.es>
+#
+# On branch add_random
+# Changes to be committed:
+#       modified:   dft.py
+#
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+-- INSERT --
