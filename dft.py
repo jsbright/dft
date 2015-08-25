@@ -1,11 +1,16 @@
 import scipy
 import numpy
 import matplotlib.pyplot as plt
+import random
 
 #test comment
  
 def random_data_creation():
-	random_numbers = random.random(range(1000), 100)
+	T = 0
+	random_numbers = []
+	while (T<1000):
+		random_numbers.append(100+50*numpy.sin(T*((numpy.pi)/20))+random.randint(-25,25))
+		T = T+1
 	return (random_numbers)
 	
 def periodic_function():
@@ -18,7 +23,17 @@ def periodic_function():
 	return (periodic_function_form)	
 
 def main():
-	data = periodic_function()
+	input = raw_input("1 for perfect sin wave, 2 for sin wave with noise: ")
+	print input
+
+	if input == '1':
+		data = periodic_function()
+	elif input == '2':
+		data = random_data_creation()
+	else:
+		print "Wrong Input"
+		exit()
+
 	data_length = len(data)
 	x_im = []
 	x_re = []
